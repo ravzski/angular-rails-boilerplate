@@ -11,6 +11,11 @@ angular.module('client').config [
         templateUrl: 'pages/login/index.html'
         controller: 'LoginCtrl'
 
+      .state 'register',
+        url: '/register',
+        templateUrl: 'pages/register/index.html'
+        controller: 'RegisterCtrl'
+
       .state 'admin',
         url: '/admin',
         templateUrl: 'pages/admin/index.html'

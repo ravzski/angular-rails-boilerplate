@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: spmetrics_development
+  database: boilerplate_dev
   pool: 5
   username: postgres
   password: admin
@@ -10,17 +10,8 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: spmetrics_test
+  database: boilerplate_test
   pool: 5
   username: postgres
   password: admin
   host: localhost
-
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: spmetrics
-  pool: 5
-  username: 50urc3p4d
-  password: 50urc3p4d
-  host: rds-sp-west1a.cmmar3yydpgz.us-west-1.rds.amazonaws.com

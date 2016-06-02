@@ -1,17 +1,16 @@
 Ctrl = ($scope,$state,User,growl,$http,Auth)->
 
-  $scope.ctrl =
-    loading: false
-    creds: {}
+  $scope.collection = []
 
-  $scope.register =(user)->
-    $scope.ctrl.loading = true
+
+  $scope.register=(user)->
     User.save({user: user}).$promise
-      .then (data) ->
-        growl.success(MESSAGES.LOGIN_SUCCESS)
-      .finally ->
-        $scope.ctrl.loading = false
+      .then (data)->
+        growl.success(MESSAGES.REGISTER_SUCCESS)
 
+  $scope.delete=(user)->
+    swal(DELETE_WARNING).then (isConfirm) ->
+      return unless isConfirm
 
 Ctrl.$inject = ['$scope','$state','User','growl','$http','Auth']
 angular.module('client').controller('RegisterCtrl', Ctrl)

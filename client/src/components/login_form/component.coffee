@@ -12,7 +12,6 @@ Ctrl = ->
 
   return
 
-
 angular.module('client').component 'loginForm',
   templateUrl: 'components/login_form/index.html'
   controller: Ctrl

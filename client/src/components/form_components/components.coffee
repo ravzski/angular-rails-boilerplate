@@ -19,7 +19,7 @@ Ctrl = ($scope, $element, $attrs) ->
 Ctrl.$inject = ['$scope','$element','$attrs']
 
 angular.module('client').component 'formInput',
-  templateUrl: 'modules/form_components/input.html'
+  templateUrl: 'components/form_components/input.html'
   controller: Ctrl
   bindings:
     fieldValue: "="

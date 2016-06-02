@@ -1,0 +1,30 @@
+.panel
+  background-color: #fff
+  padding: 5px 15px 0px 15px
+  border-radius: 1px
+  position: relative
+  //+box-shadow((0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)))
+  +transition(all 0.2s ease-in-out)
+  &:hover
+    +box-shadow((0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)))
+  .panel-head
+    border-bottom: 1px solid $gray-light
+    // margin-bottom: 20px
+    h1,h2
+      margin: 15px 0px
+      text-transform: uppercase
+      font-weight: 200
+      font-size: 1.4em
+    .btn-action
+      position: absolute
+      top: 12px
+      right: 10px
+      padding: 4px 7px
+      font-size: 15px
+
+  .panel-body
+    overflow-y: auto
+    overflow-x: hidden
+    padding: 10px
+    &.condensed
+      padding: 0px

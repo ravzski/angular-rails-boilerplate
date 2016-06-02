@@ -20,7 +20,7 @@ Ctrl = ->
   return
 
 angular.module('client').component 'sortable',
-  templateUrl: 'modules/sortable/index.html'
+  templateUrl: 'components/sortable/index.html'
   controller: Ctrl
   bindings:
     columnName: "@"

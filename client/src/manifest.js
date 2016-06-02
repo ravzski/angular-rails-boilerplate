@@ -20,4 +20,4 @@
 //= require_tree ./services
 //= require_tree ./directives
 //= require_tree ./pages
-//= require_tree ./modules
+//= require_tree ./components

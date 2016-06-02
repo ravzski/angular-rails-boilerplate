@@ -14,7 +14,7 @@ Ctrl = ->
 
 
 angular.module('client').component 'loginForm',
-  templateUrl: 'modules/login_form/index.html'
+  templateUrl: 'components/login_form/index.html'
   controller: Ctrl
   bindings:
     login: "&"

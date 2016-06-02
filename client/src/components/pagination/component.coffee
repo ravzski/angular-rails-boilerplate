@@ -12,7 +12,7 @@ angular.module('client').filter 'range', ->
 angular.module('client').directive "pagination", ->
   restrict: "E"
   replace: true
-  templateUrl: 'modules/pagination/index.html'
+  templateUrl: 'components/pagination/index.html'
   scope:
     count: "="
     page: "="

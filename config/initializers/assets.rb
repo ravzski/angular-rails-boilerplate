@@ -9,7 +9,7 @@ Rails.application.config.assets.paths << "#{Rails.root}/client/images"
 Rails.application.config.assets.paths << "#{Rails.root}/client/stylesheets"
 Rails.application.config.assets.paths << "#{Rails.root}/client/bower_components"
 
-Rails.application.config.assets.precompile += %w( app.js app.css))
+Rails.application.config.assets.precompile += %w( app.js app.css )
 
 Rails.application.config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
 Rails.application.config.assets.precompile << /\.(?:png|jpg)\z/

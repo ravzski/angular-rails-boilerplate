@@ -19,6 +19,15 @@ class Api::V1::UsersController < ApiController
     update_obj
   end
 
+  def update_password
+    @service = Users::ChangePassword.new(@obj)
+    if @service.process(params)
+      render_success
+    else
+      fail ServiceError
+    end
+  end
+  
   def delete
     delete_obj
   end

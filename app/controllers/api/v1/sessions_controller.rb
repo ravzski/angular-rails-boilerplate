@@ -6,7 +6,7 @@ class Api::V1::SessionsController < ApiController
     if current_user.present?
       render json: Sessions::Builder.new(current_user).show
     else
-      render_expired_session
+      fail ExpiredSessionError
     end
   end
 
@@ -15,15 +15,15 @@ class Api::V1::SessionsController < ApiController
     if user && user.set_access_token
       render json: Sessions::Builder.new(user).show
     else
-      render json: { error: 'Incorrect email or password' }, status: :unauthorized
+      fail InvalidCredentialsError
     end
   end
 
   def destroy
-    if current_user.destroy_token
-      render_update_success
+    if current_user.destroy_token(request.headers['AccessToken'])
+      render_success
     else
-      render_obj_errors
+      obj_errors
     end
   end
 

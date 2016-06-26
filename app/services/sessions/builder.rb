@@ -11,9 +11,7 @@ module Sessions
     def show
       {
         id: @current_user.id,
-        name: @current_user.name,
         email: @current_user.email,
-        is_leave_approver: @current_user.is_leave_approver,
         access_token: @current_user.access_token
       }
     end

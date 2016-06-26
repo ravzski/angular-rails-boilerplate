@@ -10,20 +10,26 @@ angular.module('client').config [
         url: '/login',
         templateUrl: 'pages/login/index.html'
         controller: 'LoginCtrl'
+        data:
+          unauthenticated: true
 
       .state 'register',
         url: '/register',
         templateUrl: 'pages/register/index.html'
         controller: 'RegisterCtrl'
+        data:
+          unauthenticated: true
 
       .state 'admin',
         url: '/admin',
         templateUrl: 'pages/admin/index.html'
         controller: 'AdminCtrl'
         abstract: true
+        data:
+          authenticated: true
 
       .state 'admin.dashboard',
-        url: '/dashboard?ref_date&offset',
+        url: '/dashboard',
         templateUrl: 'pages/dashboard/index.html'
         controller: 'DashboardCtrl'
 

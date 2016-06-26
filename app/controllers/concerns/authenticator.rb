@@ -14,15 +14,7 @@ module Authenticator
   end
 
   def authenticate_request
-    render_expired_session unless current_user.present?
-  end
-
-  def render_expired_session
-    render json: { error: 'Your session has expired' }, status: 401
-  end
-
-  def render_access_denied
-    render json: { error: 'Access Denied' }, status: 403
+    fail ExpiredSessionError unless current_user.present?
   end
 
 end

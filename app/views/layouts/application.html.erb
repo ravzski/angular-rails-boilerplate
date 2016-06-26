@@ -16,16 +16,15 @@
     <meta content="" name="description" />
     <meta content="" name="keywords" />
     <meta content="text/html;charset=UTF-8" http-equiv="content-type" />
-    <link href="https://file.myfontastic.com/3LbUAL3QE6crUsxw6kTS8G/icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.3.2/css/simple-line-icons.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200normal,200italic,300normal,300italic,400normal,400italic,600normal,600italic,700normal,700italic,900normal,900italic" rel="stylesheet">
-
 
     <%= stylesheet_link_tag    "app" %>
     <%= javascript_include_tag "app" %>
 
   </head>
 
-  <body ng-app="client">
+  <body ng-app="client" ng-class="bodyClass">
     <div ui-view=""></div>
     <div growl limit-messages="1"></div>
   </body>

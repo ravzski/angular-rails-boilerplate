@@ -1,19 +1,19 @@
 =buttons($color, $bg-color)
   color: $color
-  //text-shadow: 1px 1px $gray
   background-color: $bg-color
   border: 0px
-
   &:hover, &:focus, &:active
     color: #fff
     background-color: mix(black, $bg-color, 15%)
     cursor: pointer
-
   &.no-hover
     &:hover, &:focus, &:active
       color: $color
       background-color: $bg-color
 
+.btn-block
+  display: block
+  width: 100%
 
 .btn-close
   position: absolute
@@ -24,9 +24,9 @@
 
 .btn
   border: 0px
-  border-radius: 2px
+  border-radius: 0px
   padding: 7px 15px
-  font-size: 12px
+  font-size: 14px
   font-weight: 200
   line-height: 1.42857143
   text-align: center
@@ -41,7 +41,7 @@
   +buttons(#fff,$success)
 
 .btn-primary
-  +buttons(#fff,$blue)
+  +buttons(#fff,$primary)
 
 .btn-danger
   +buttons(#fff,$danger)

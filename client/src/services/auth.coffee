@@ -11,6 +11,11 @@ module = ($resource,Session)->
       localStorage.removeItem("access_token")
       localStorage.removeItem("user_id")
       return
+    uploadCreds: (id)->
+      tmp=
+        access_token: localStorage.getItem('access_token')
+        user_id: user.id
+        ref_id: id
 
   }
 

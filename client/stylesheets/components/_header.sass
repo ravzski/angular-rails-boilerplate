@@ -1,0 +1,68 @@
+.header-container
+  position: fixed
+  top: -1px
+  width: 100%
+  z-index: 1000
+
+.header
+  background: $primary
+  min-height: 55px
+  border-bottom: 1px solid $border
+  padding-left: 200px
+
+.user-dropdown
+  .dropdown
+    position: absolute
+    top: 55px
+    right: 5px
+    background-color: $white
+    border: 1px solid $border
+    border-radius: 2px
+    border-top: 0px
+    ul
+      +ul-reset
+      width: 150px
+      li
+        border-bottom: 1px solid $border
+        display: block
+        &:first-child
+          border-top: 1px solid $border
+        a
+          font-size: 12px
+          padding: 10px
+          font-weight: bold
+          display: block
+          color: $gray
+          &:hover
+            border: 0px
+        &:last-child
+          border-bottom: 0px
+
+.header-right
+  float: right
+  margin: 10px 15px
+  padding: 0px
+  list-style: none
+  li
+    display: inline-block
+    a
+      display: block
+      color: $white
+      font-size: 18px
+      padding: 4px 7px
+      &.user-info
+        border: 1px solid
+        border-radius: 50%
+
+.sidebar-toggle
+  color: $white
+  font-size: 24px
+  line-height: .5
+  display: block
+  float: left
+  position: relative
+  top: 15px
+  left: 10px
+
+body.condensed .header-container .header
+  padding-left: 70px

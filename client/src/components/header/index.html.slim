@@ -1,0 +1,18 @@
+.header-container
+  .header
+    a.sidebar-toggle ng-click="toggleSidebar()"
+      i.icon.icon-arrow-left-circle
+
+    ul.header-right
+      ul
+        li.user-dropdown  ng-class="{dropdowned: showDropdown}"
+          a.user-info ng-click="toggleDropdown($event)"
+            i.icon.icon-user
+            i.icon.icon-down
+
+          .dropdown ng-show="showDropdown"
+            ul
+              li
+                a href="/admin/profile" Profile
+              li
+                a ng-click="logout()" Logout

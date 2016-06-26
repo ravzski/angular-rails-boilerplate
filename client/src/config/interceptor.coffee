@@ -8,7 +8,7 @@ angular.module('client').factory('httpInterceptor', [
         message = response.data.error or response.data.errors?.join("<br><br>") or 'Something went wrong'
         switch response.status
           when 401,403
-            growl.error(MESSAGES.ACCESS_DENIED)
+            growl.error(message)
             $injector.get('Auth').removeUser()
             $injector.get('$state').go("login")
           when 422

@@ -4,6 +4,10 @@ module = ($resource)->
     {
       update:
         method: 'PUT'
+      getList:
+        url: "/api/users"
+        method: 'get'
+        isArray: false
     }
 
 

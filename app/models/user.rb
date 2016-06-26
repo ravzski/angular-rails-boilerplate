@@ -1,13 +1,10 @@
 class User < ActiveRecord::Base
   include Authenticable
   include TokenProcessor
-  include Cachable
-  include CommonScopes
 
   validates :email, presence: true, email: true
   validate :validate_password_presence
   validate :validate_password_length
-  validate :validate_github_username_usage
 
   after_destroy :destroy_token
 

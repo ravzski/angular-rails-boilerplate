@@ -2,13 +2,14 @@ Ctrl = ->
   ctrl = this
 
   ctrl.$onInit = ->
-    ctrl.creds.email = ''
-    ctrl.creds.password = ''
+    @.creds =
+      email: ''
+      password: ''
 
   ctrl.submit =(form)=>
     form.$submitted = true
     if form.$valid
-      this.login()
+      @.login({creds: @.creds})
 
   return
 
@@ -18,4 +19,3 @@ angular.module('client').component 'loginForm',
   bindings:
     login: "&"
     loading: "="
-    creds: "="
